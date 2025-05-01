@@ -5,7 +5,7 @@ export default function Navbar() {
   const [toggleMenu, setToggleMenu] = useState(false);
 
   return (
-    <div className="bg-gradient-to-tl from-[#FF6FB9]/20 to-[#6797FF]/50 backdrop-blur-[1000px]">
+    <div className="bg-gradient-to-tl from-[#FF6FB9]/10 to-[#6797FF]/10 backdrop-blur-[1000px]">
       <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8 ">
         {/* Navbar */}
         <div className="py-4 md:py-6">
@@ -48,7 +48,7 @@ export default function Navbar() {
                   AI Coach
                 </p>
               </div>
-              <button className="font-[Manrope] px-6 h-[48px] border border-gray-300 rounded-3xl font-semibold hover:bg-gray-50 transition-colors">
+              <button className="font-[Manrope] px-6 h-[48px] border border-[#010205] rounded-3xl font-semibold hover:bg-gray-50 transition-colors">
                 Get Started
               </button>
             </div>
@@ -120,7 +120,7 @@ export default function Navbar() {
               </div>
 
               <div className="mt-8 grid sm:grid-cols-1 md:grid-cols-2 gap-6">
-                <div className="flex items-center justify-between gap-4 p-4 bg-white rounded-lg">
+                <div className="flex items-center  gap-4 p-4   rounded-lg">
                   <div className="w-16 h-16 flex-shrink-0 overflow-hidden rounded-md shadow-lg">
                     <img
                       src="backup_table.png"
@@ -136,7 +136,7 @@ export default function Navbar() {
                   </div>
                 </div>
 
-                <div className="flex items-center justify-between gap-4 p-4 bg-white rounded-lg">
+                <div className="flex items-center  gap-4 p-4  rounded-lg">
                   <div className="w-16 h-16 flex-shrink-0 overflow-hidden rounded-md shadow-lg flex items-center justify-center">
                     <img src="atr.png" alt="Statistics" />
                   </div>
@@ -152,7 +152,7 @@ export default function Navbar() {
 
             <div className="relative">
               <img src="bannerImg.png" alt="" className="hover:z-20 hover:scale-105 cursor-pointer transition-all duration-600"/>
-              <div className="absolute sm:top-172 lg:top-170 sm:-right-40 lg:right-60 transform -translate-y-full mb-4 bg-white p-6 rounded-lg shadow-lg z-10 w-full md:w-3/4">
+              <div className="absolute top-112 md:top-170 lg:top-160 sm:-right-40 lg:right-40 transform -translate-y-full mb-4 bg-white p-6 rounded-lg shadow-lg z-10 w-full md:w-3/4">
                 <div>
                   <div className="flex justify-between mb-4">
                     <div className="text-3xl font-semibold text-[#05131D]">
