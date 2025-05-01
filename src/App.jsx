@@ -1,6 +1,7 @@
 import Courses from "./components/Courses"
 import Navbar from "./components/Navbar"
 import Review from "./components/Review"
+import Footer from "./components/Footer"
 
 function App(){
   return(
@@ -8,6 +9,7 @@ function App(){
       <Navbar/>
       <Courses/>
       <Review/>
+      <Footer/>
     </div>
   )
 }
