@@ -1,12 +1,55 @@
-# React + Vite
+# SalesRank.AI - AI-Powered Sales Coaching Platform
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+![SalesRank.AI Logo](./logo.png)
 
-Currently, two official plugins are available:
+SalesRank.AI is a modern React-based web application designed to provide AI-powered sales coaching, real-time suggestions, and deal-closing strategies to sales professionals.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Features
 
-## Expanding the ESLint configuration
+- **Interactive AI Coach**: Real-time conversational interface with pre-built sales prompts
+- **Responsive Navigation**: Clean navbar with mobile-friendly menu
+- **Animated Hero Section**: Engaging introduction with animated elements
+- **Course Catalog**: Display of available sales training courses
+- **FAQ Accordion**: Interactive frequently asked questions section
+- **Performance Metrics**: Visual statistics showcasing platform benefits
+- **Confidence Analysis**: Real-time confidence level indicators
+- **Quick Actions**: One-click script generation and pitch practice
+- **Modern UI**: Gradient backgrounds, smooth animations, and clean design
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Technologies Used
+
+- **React**: Frontend JavaScript library
+- **Tailwind CSS**: Utility-first CSS framework
+- **Lucide React**: Beautiful & consistent icons
+- **React Awesome Reveal**: Animation library for scroll effects
+- **Vite**: Next generation frontend tooling
+
+## Components
+
+1. **Navbar.jsx**
+   - Responsive navigation with mobile menu toggle
+   - Gradient background with blur effect
+   - Animated logo and menu items
+
+2. **AI.jsx** (Interactive AI Coach)
+   - Real-time chat interface with AI responses
+   - Pre-built sales suggestion buttons
+   - Confidence level indicators
+   - Quick action buttons (Generate Script, Practice Pitch)
+   - Message history persistence
+
+3. **Courses.jsx**
+   - Course listing section
+   - Responsive card layout
+   - Category filtering options
+
+4. **FAQAccordion.jsx**
+   - Interactive FAQ section
+   - Expand/collapse functionality
+   - Clean typography and spacing
+
+## Installation
+
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/yourusername/salesrank-ai.git
