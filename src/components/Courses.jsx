@@ -1,3 +1,4 @@
+import { Fade } from "react-awesome-reveal";
 function Courses() {
   return (
     <div className="my-12 max-w-[1440px] px-4 mx-auto">
@@ -21,36 +22,58 @@ function Courses() {
       </div>
       {/* courses */}
       <div className="flex flex-col lg:flex-row justify-between sm:place-items-center gap-4">
-        <div className="w-full max-w-[705px] p-8 lg:p-12 bg-[#F1F1F3] space-y-4 rounded-sm ">
-          <img src="./course1.png" alt="" className="w-full"/>
-          <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
-            <div className="flex gap-4 flex-wrap">
-            <button className="text-[#4C4C4D] bg-white py-2.5 px-4 text-sm rounded-sm">4 Weeks</button>
-            <button className="text-[#4C4C4D] bg-white py-2.5 px-4 text-sm rounded-sm">Beginner</button>
+        <Fade>
+          <div className="w-full max-w-[705px] p-8 lg:p-12 bg-[#F1F1F3] space-y-4 rounded-sm ">
+            <img src="./course1.png" alt="" className="w-full" />
+            <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
+              <div className="flex gap-4 flex-wrap">
+                <button className="text-[#4C4C4D] bg-white py-2.5 px-4 text-sm rounded-sm">
+                  4 Weeks
+                </button>
+                <button className="text-[#4C4C4D] bg-white py-2.5 px-4 text-sm rounded-sm">
+                  Beginner
+                </button>
+              </div>
+              <p className="text-[#262626] whitespace-nowrap">By John Smith</p>
             </div>
-            <p className="text-[#262626] whitespace-nowrap">By John Smith</p>
+            <h1 className="text-2xl text-[#262626] py-4">
+              Web Design Fundamentals
+            </h1>
+            <p className="text-[#4C4C4D] text-sm">
+              Learn the fundamentals of web design, including HTML, CSS, and
+              responsive design principles. Develop the skills to create
+              visually appealing and user-friendly websites.
+            </p>
+            <button className="w-full text-white bg-[#002868] py-[18px] px-6 rounded-sm">
+              Get it Now
+            </button>
           </div>
-          <h1 className="text-2xl text-[#262626] py-4">Web Design Fundamentals</h1>
-          <p className="text-[#4C4C4D] text-sm">Learn the fundamentals of web design, including HTML, CSS, and responsive design principles. Develop the skills to create visually appealing and user-friendly websites.</p>
-          <button className="w-full text-white bg-[#002868] py-[18px] px-6 rounded-sm">Get it Now</button>
-        </div>
-        <div className="w-full max-w-[705px] p-8 lg:p-12 bg-[#F1F1F3] space-y-4 rounded-sm ">
-          <img src="./course2.png" alt="" className="w-full"/>
-          <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
-            <div className="flex gap-4 flex-wrap">
-            <button className="text-[#4C4C4D] bg-white py-2.5 px-4 text-sm rounded-sm">4 Weeks</button>
-            <button className="text-[#4C4C4D] bg-white py-2.5 px-4 text-sm rounded-sm">Beginner</button>
-
-              
-              
+          <div className="w-full max-w-[705px] p-8 lg:p-12 bg-[#F1F1F3] space-y-4 rounded-sm ">
+            <img src="./course2.png" alt="" className="w-full" />
+            <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
+              <div className="flex gap-4 flex-wrap">
+                <button className="text-[#4C4C4D] bg-white py-2.5 px-4 text-sm rounded-sm">
+                  4 Weeks
+                </button>
+                <button className="text-[#4C4C4D] bg-white py-2.5 px-4 text-sm rounded-sm">
+                  Beginner
+                </button>
+              </div>
+              <p className="text-[#262626] whitespace-nowrap">By John Smith</p>
             </div>
-            <p className="text-[#262626] whitespace-nowrap">By John Smith</p>
+            <h1 className="text-2xl text-[#262626] py-4">
+              Web Design Fundamentals
+            </h1>
+            <p className="text-[#4C4C4D] text-sm">
+              Learn the fundamentals of web design, including HTML, CSS, and
+              responsive design principles. Develop the skills to create
+              visually appealing and user-friendly websites.
+            </p>
+            <button className="w-full text-white bg-[#002868] py-[18px] px-6 rounded-sm">
+              Get it Now
+            </button>
           </div>
-          <h1 className="text-2xl text-[#262626] py-4">Web Design Fundamentals</h1>
-          <p className="text-[#4C4C4D] text-sm">Learn the fundamentals of web design, including HTML, CSS, and responsive design principles. Develop the skills to create visually appealing and user-friendly websites.</p>
-          <button className="w-full text-white bg-[#002868] py-[18px] px-6 rounded-sm">Get it Now</button>
-        </div>
-        
+        </Fade>
       </div>
     </div>
   );

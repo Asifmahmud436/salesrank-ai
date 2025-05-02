@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
+import { Slide, Fade } from "react-awesome-reveal";
 
 export default function Navbar() {
   const [toggleMenu, setToggleMenu] = useState(false);
@@ -19,39 +20,44 @@ export default function Navbar() {
                   className="w-full h-full"
                 />
               </div>
-              <div className="flex flex-col">
-                <p className="text-xl sm:text-2xl font-bold tracking-tight text-[#1e3a8a]">
-                  SalesRank.AI
-                </p>
-                <p className="uppercase text-[0.52rem] font-medium tracking-wider text-[#1e3a8a]">
-                  stop guessing start ranking
-                </p>
-              </div>
+              <Fade>
+                <div className="flex flex-col">
+                  <p className="text-xl sm:text-2xl font-bold tracking-tight text-[#1e3a8a]">
+                    SalesRank.AI
+                  </p>
+                  <p className="uppercase text-[0.52rem] font-medium tracking-wider text-[#1e3a8a]">
+                    stop guessing start ranking
+                  </p>
+                </div>
+              </Fade>
             </div>
 
             {/* Desktop Navigation */}
-            <div className="hidden lg:flex items-center space-x-8">
-              <div className="flex space-x-6 text-sm font-semibold">
-                <p className="cursor-pointer hover:text-blue-600 transition-colors">
-                  Home
-                </p>
-                <p className="cursor-pointer hover:text-blue-600 transition-colors">
-                  About
-                </p>
-                <p className="cursor-pointer hover:text-blue-600 transition-colors">
-                  Pricing
-                </p>
-                <p className="cursor-pointer hover:text-blue-600 transition-colors">
-                  Consulting
-                </p>
-                <p className="cursor-pointer hover:text-blue-600 transition-colors">
-                  AI Coach
-                </p>
+
+            <Fade>
+              <div className="hidden lg:flex items-center space-x-8">
+                <div className="flex space-x-6 text-sm font-semibold">
+                  <p className="cursor-pointer hover:text-blue-600 transition-colors">
+                    Home
+                  </p>
+                  <p className="cursor-pointer hover:text-blue-600 transition-colors">
+                    About
+                  </p>
+                  <p className="cursor-pointer hover:text-blue-600 transition-colors">
+                    Pricing
+                  </p>
+                  <p className="cursor-pointer hover:text-blue-600 transition-colors">
+                    Consulting
+                  </p>
+                  <p className="cursor-pointer hover:text-blue-600 transition-colors">
+                    AI Coach
+                  </p>
+                </div>
+                <button className="font-[Manrope] px-6 h-[48px] border border-[#010205] rounded-3xl font-semibold hover:bg-gray-50 transition-colors">
+                  Get Started
+                </button>
               </div>
-              <button className="font-[Manrope] px-6 h-[48px] border border-[#010205] rounded-3xl font-semibold hover:bg-gray-50 transition-colors">
-                Get Started
-              </button>
-            </div>
+            </Fade>
 
             {/* Mobile Menu Button */}
             <button
@@ -98,20 +104,24 @@ export default function Navbar() {
         <div className="mt-8 md:mt-12 pb-12">
           <div className="flex flex-col lg:flex-row items-start lg:items-center justify-between gap-8 lg:gap-12">
             <div className="w-full lg:w-1/2">
-              <h1 className="text-4xl sm:text-5xl md:text-6xl leading-tight">
-                Your AI-
-                <br />
-                Powered <br />
-                Sales Coach
-              </h1>
+              <Fade>
+                <h1 className="text-4xl sm:text-5xl md:text-6xl leading-tight">
+                  Your AI-
+                  <br />
+                  Powered <br />
+                  Sales Coach
+                </h1>
+              </Fade>
 
               <div className="flex flex-col sm:flex-row items-start sm:items-center gap-6 mt-6 sm:mt-9">
                 <div className="w-full sm:w-auto max-w-[198px] h-auto shadow-2xl rounded-lg overflow-hidden">
-                  <img
-                    src="./roboImg.png"
-                    alt="AI Sales Coach"
-                    className="w-full h-full object-cover hover:scale-105 cursor-pointer transition-all duration-600"
-                  />
+                  <Slide>
+                    <img
+                      src="./roboImg.png"
+                      alt="AI Sales Coach"
+                      className="w-full h-full object-cover hover:scale-105 cursor-pointer transition-all duration-600"
+                    />
+                  </Slide>
                 </div>
                 <p className="text-[#05131DB2] max-w-[346px]">
                   Get real-time coaching, script suggestions, and deal-closing
@@ -151,26 +161,34 @@ export default function Navbar() {
             </div>
 
             <div className="relative">
-              <img src="bannerImg.png" alt="" className="hover:z-20 hover:scale-105 cursor-pointer transition-all duration-600"/>
-              <div className="absolute top-112 md:top-170 lg:top-160 sm:-right-40 lg:right-40 transform -translate-y-full mb-4 bg-white p-6 rounded-lg shadow-lg z-10 w-full md:w-3/4">
-                <div>
-                  <div className="flex justify-between mb-4">
-                    <div className="text-3xl font-semibold text-[#05131D]">
-                      721+
+              <Slide direction="right">
+                <img
+                  src="bannerImg.png"
+                  alt=""
+                  className="hover:z-20 hover:scale-105 cursor-pointer transition-all duration-600"
+                />
+              </Slide>
+              <Fade>
+                <div className="absolute top-112 md:top-170 lg:top-160 sm:-right-40 lg:right-40 transform -translate-y-full mb-4 bg-white p-6 rounded-lg shadow-lg z-10 w-full md:w-3/4">
+                  <div>
+                    <div className="flex justify-between mb-4">
+                      <div className="text-3xl font-semibold text-[#05131D]">
+                        721+
+                      </div>
+                      <div className="text-3xl font-semibold text-[#05131D]">
+                        1000+
+                      </div>
                     </div>
-                    <div className="text-3xl font-semibold text-[#05131D]">
-                      1000+
-                    </div>
+                    <p className="py-6 font-semibold text-2xl">
+                      Growth is our priority.
+                    </p>
+                    <p className="text-sm text-gray-600">
+                      As a full-service business agency, we specialize in
+                      helping companies of all sizes optimize their operations
+                    </p>
                   </div>
-                  <p className="py-6 font-semibold text-2xl">
-                    Growth is our priority.
-                  </p>
-                  <p className="text-sm text-gray-600">
-                    As a full-service business agency, we specialize in helping
-                    companies of all sizes optimize their operations
-                  </p>
                 </div>
-              </div>
+              </Fade>
             </div>
           </div>
         </div>

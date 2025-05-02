@@ -1,14 +1,17 @@
-import { useState } from "react"
-import { Minus, Plus } from "lucide-react"
+import { useState } from "react";
+import { Minus, Plus } from "lucide-react";
+import { Fade } from "react-awesome-reveal";
 
 export default function FAQAccordion() {
-  const [openItems, setOpenItems] = useState([1, 2])
+  const [openItems, setOpenItems] = useState([1, 2]);
 
   const toggleItem = (index) => {
     setOpenItems((prevOpenItems) =>
-      prevOpenItems.includes(index) ? prevOpenItems.filter((item) => item !== index) : [...prevOpenItems, index],
-    )
-  }
+      prevOpenItems.includes(index)
+        ? prevOpenItems.filter((item) => item !== index)
+        : [...prevOpenItems, index]
+    );
+  };
 
   const faqItems = [
     {
@@ -29,35 +32,52 @@ export default function FAQAccordion() {
       answer:
         "To provide an accurate quotation, we need to understand your project scope, timeline, and specific requirements. The more details you can share about your business goals and expectations, the more precise our quotation will be.",
     },
-  ]
+  ];
 
   return (
-    <div className="max-w-3xl mx-auto p-6 bg-white">
-      <div className="mb-8">
-        <p className="text-sm text-gray-500 mb-2">Frequently asked <br />questions</p>
-        <h2 className="text-2xl lg:text-4xl text-center w-full lg:max-w-[920px]">Constant collaboration is how we <br />roll. Let's see if we are a good fit.</h2>
-      </div>
+    <Fade>
+      <div className="max-w-3xl mx-auto p-6 bg-white font-[Manrope]">
+        <div className="mb-8">
+          <p className="text-sm text-gray-500 mb-2">
+            Frequently asked <br />
+            questions
+          </p>
+          <h2 className="text-2xl lg:text-4xl text-center w-full lg:max-w-[920px]">
+            Constant collaboration is how we <br />
+            roll. Let's see if we are a good fit.
+          </h2>
+        </div>
 
-      <div className="space-y-6">
-        {faqItems.map((item, index) => (
-          <div key={index} className="border-b border-gray-200 pb-6">
-            <div className="flex items-start justify-between cursor-pointer" onClick={() => toggleItem(index)}>
-              <div className="flex gap-4">
-                <span className="text-amber-600 font-medium">{item.number}</span>
-                <h3 className="text-lg font-medium">{item.question}</h3>
+        <div className="space-y-6">
+          {faqItems.map((item, index) => (
+            <div key={index} className="border-b border-gray-200 pb-6">
+              <div
+                className="flex items-start justify-between cursor-pointer"
+                onClick={() => toggleItem(index)}
+              >
+                <div className="flex gap-4">
+                  <span className="text-amber-600 font-medium">
+                    {item.number}
+                  </span>
+                  <h3 className="text-lg font-medium">{item.question}</h3>
+                </div>
+                <button className="mt-1 flex-shrink-0">
+                  {openItems.includes(index) ? (
+                    <Minus className="h-5 w-5" />
+                  ) : (
+                    <Plus className="h-5 w-5" />
+                  )}
+                </button>
               </div>
-              <button className="mt-1 flex-shrink-0">
-                {openItems.includes(index) ? <Minus className="h-5 w-5" /> : <Plus className="h-5 w-5" />}
-              </button>
+              {openItems.includes(index) && (
+                <div className="mt-2 ml-10 text-gray-600">
+                  <p>{item.answer}</p>
+                </div>
+              )}
             </div>
-            {openItems.includes(index) && (
-              <div className="mt-2 ml-10 text-gray-600">
-                <p>{item.answer}</p>
-              </div>
-            )}
-          </div>
-        ))}
+          ))}
+        </div>
       </div>
-    </div>
-  )
+    </Fade>
+  );
 }
