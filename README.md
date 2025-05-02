@@ -1,6 +1,6 @@
 # SalesRank.AI - AI-Powered Sales Coaching Platform
 
-![SalesRank.AI Logo](./logo.png)
+
 
 SalesRank.AI is a modern React-based web application designed to provide AI-powered sales coaching, real-time suggestions, and deal-closing strategies to sales professionals.
 
